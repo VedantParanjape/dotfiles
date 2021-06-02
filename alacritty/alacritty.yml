@@ -1,0 +1,126 @@
+# Colors (Blood Moon)
+colors:
+  # Default colors
+  primary:
+    background: '0x10100E'
+    foreground: '0xC6C6C4'
+
+  # Normal colors
+  normal:
+    black:   '0x10100E'
+    red:     '0xC40233'
+    green:   '0x009F6B'
+    yellow:  '0xFFD700'
+    blue:    '0x0087BD'
+    magenta: '0x9A4EAE'
+    cyan:    '0x20B2AA'
+    white:   '0xC6C6C4'
+
+  # Bright colors
+  bright:
+    black:   '0x696969'
+    red:     '0xFF2400'
+    green:   '0x03C03C'
+    yellow:  '0xFDFF00'
+    blue:    '0x007FFF'
+    magenta: '0xFF1493'
+    cyan:    '0x00CCCC'
+    white:   '0xFFFAFA'
+
+shell:
+  program: /usr/bin/tmux
+  args:
+    - -u
+    - new-session
+    - -A
+    - -D
+    - -s  
+    - main
+
+font:
+  normal:
+    family: "Monospace"
+    style: Regular
+  bold:
+    family: "Monospace"
+    style: Bold
+  italic:
+    family: "Monospace"
+    style: Italic
+  bold_italic:
+    family: "Monospace"
+    style: Bold Italic
+
+  # Point size
+  size: 12
+
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+
+window:
+  padding:
+    x: 2
+    y: 2
+  decorations: none #Still won't show in a window manger, but will in a desktop environment
+  startup_mode: Maximized
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 3
+  
+  faux_multipler: 0
+
+background_opacity: 0.9
+window.dynamic_title: true
+
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  save_to_clipboard: false
+
+live_config_reload: true
+
+cursor:
+  style: beam
+  blinking: off
+  blink-interval: 750
+  unfocused_hollow: true
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+
+  hide_when_typing: false
+
+  hints:
+    launcher:
+      program: xdg-open
+      args: []
+
+    modifiers: "Command"
+
+mouse_bindings:
+  - { mouse: Left, action: PasteSelection }
+    
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: NumpadAdd, mods: Control, action: IncreaseFontSize }
+  - { key: NumpadSubtract, mods: Control, action: DecreaseFontSize }
+  - { key: Slash, mods: Control, action: DecreaseFontSize }
+  - { key: N, mods: Control, action: SpawnNewInstance }
+  - { key: Q, mods: Alt, action: Quit}
+
