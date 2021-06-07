@@ -1,6 +1,6 @@
 # config files
 
-config files for alacritty + zsh + tmux
+config files for alacritty + zsh + tmux + nvim
 
 ![](./screenshot.png)
 ![](./screenshot-nvim.png)
