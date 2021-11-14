@@ -11,6 +11,7 @@ config files for alacritty + zsh + tmux + nvim
 * zsh
 * oh-my-zsh
 * tmux
+* [Patched HackNerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack) 
 * powerline
 * nvim (0.5.0+) (`sudo snap install nvim --edge --classic`)
 * language servers (pyright, clangd, jsonls, cmake) from [here](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md)
